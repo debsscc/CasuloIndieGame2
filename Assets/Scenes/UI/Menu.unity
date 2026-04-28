@@ -1537,6 +1537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioVisualizer
   audioSource: {fileID: 305104386}
+  micRecorder: {fileID: 305104384}
   bars:
   - {fileID: 133077583}
   - {fileID: 1027737467}

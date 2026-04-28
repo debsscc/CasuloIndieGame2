@@ -40,7 +40,7 @@ public class AudioVisualizer : MonoBehaviour
     {
         // Auto-encontra o MicrophoneRecorder na cena se não foi atribuído no Inspector.
         if (micRecorder == null)
-            micRecorder = FindFirstObjectByType<MicrophoneRecorder>();
+            micRecorder = FindAnyObjectByType<MicrophoneRecorder>();
 
         if (micRecorder != null)
             Debug.Log("[AudioVisualizer] MicrophoneRecorder encontrado: " + micRecorder.name);
