@@ -2,23 +2,38 @@ using UnityEngine;
 using UnityEngine.Events;
 
 // Reproduz de volta o AudioClip gravado pelo MicrophoneRecorder.
-[RequireComponent(typeof(AudioSource))]
 public class AudioPlayback : MonoBehaviour
 {
+    [Header("Refs")]
+    [SerializeField] private MicrophoneRecorder micRecorder;
+
     [Header("Eventos")]
     public UnityEvent OnPlaybackStarted;
     public UnityEvent<AudioClip> OnPlaybackFinished;
 
     private AudioSource audioSource;
+
     private AudioClip currentClip;
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        // Cria um AudioSource dedicado para playback, separado do AudioSource
+        // do MicrophoneRecorder que fica no mesmo GameObject
+        audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
+
+        // Auto-resolve a referência se não foi atribuída no Inspector.
+        if (micRecorder == null)
+            micRecorder = GetComponent<MicrophoneRecorder>();
     }
 
-    // Reproduz o clip gravado. Sempre conectado ao OnRecordingFinished do MicrophoneRecorder.
+    // Chamado pelo OnRecordingFinished via Inspector
+    public void PlayLastRecording()
+    {
+        if (micRecorder != null)
+            PlayRecordedAudio(micRecorder.LastRecordedClip);
+    }
+
     public void PlayRecordedAudio(AudioClip clip)
     {
         if (clip == null) return;

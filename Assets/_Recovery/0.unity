@@ -469,17 +469,29 @@ MonoBehaviour:
   sampleRate: 44100
   OnRecordingStarted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 305104384}
+        m_TargetAssemblyTypeName: MicrophoneRecorder, Assembly-CSharp
+        m_MethodName: StartRecording
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnRecordingFinished:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 305104385}
         m_TargetAssemblyTypeName: AudioPlayback, Assembly-CSharp
-        m_MethodName: PlayLastRecording
-        m_Mode: 1
+        m_MethodName: PlayRecordedAudio
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -497,7 +509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49909b6694c279a4ba2498c6d538f0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioPlayback
-  micRecorder: {fileID: 0}
   OnPlaybackStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -1547,10 +1558,10 @@ MonoBehaviour:
   - {fileID: 1026843818}
   - {fileID: 81168747}
   - {fileID: 2037021883}
-  frequencyFocusWindow: 8
+  frequencyFocusWindow: 2
   amplification: 512
   baseHeight: 0.0625
-  fFTWindow: 0
+  fFTWindow: 1
   useDecibels: 0
   spectrumData: []
 --- !u!1 &2037021882
@@ -1713,8 +1724,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 771392049}
   - {fileID: 404254928}
-  - {fileID: 305104383}
   - {fileID: 1172470399}
   - {fileID: 553898764}
   - {fileID: 958513874}
+  - {fileID: 305104383}
   - {fileID: 2038690142}
