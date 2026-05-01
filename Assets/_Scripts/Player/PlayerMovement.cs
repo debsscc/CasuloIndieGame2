@@ -19,10 +19,12 @@ public class PlayerMovement : MonoBehaviour
 
     public event Action<bool> OnFlipSprite;
 
-    // Evento disparado quando o jogador começa a se mover
-    public event Action OnMovement;
+    // Evento disparado quando o jogador começa a se mover (carrega a direção atual)
+    public event Action<Vector2> OnMovement;
     // Evento disparado quando o jogador para
     public event Action OnStop;
+    // Evento disparado quando o estado de corrida muda
+    public event Action<bool> OnSprintChanged;
 
     [SerializeField] private float speed = 5f;
     [SerializeField] private float runSpeedMultiplier = 1.5f;
@@ -57,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         bool movingNow = direction.sqrMagnitude > 0.0001f;
         if (movingNow && !_isMoving)
         {
-            OnMovement?.Invoke();
+            OnMovement?.Invoke(direction);
             _isMoving = true;
         }
         else if (!movingNow && _isMoving)
@@ -84,7 +86,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void HandleSprintInput(bool sprinting)
     {
+        if (_isRunning == sprinting) return;
         _isRunning = sprinting;
+        OnSprintChanged?.Invoke(_isRunning);
     }
 
     void FixedUpdate()
