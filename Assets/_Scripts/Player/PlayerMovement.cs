@@ -55,14 +55,14 @@ public class PlayerMovement : MonoBehaviour
     {
         _moveDirection = direction;
         
-        // Dispara eventos OnMovement / OnStop quando o estado de movimento muda
+        // Dispara eventos OnMovement / OnStop
         bool movingNow = direction.sqrMagnitude > 0.0001f;
-        if (movingNow && !_isMoving)
+        if (movingNow)
         {
-            OnMovement?.Invoke(direction);
+            OnMovement?.Invoke(direction); // dispara a cada frame para atualizar direção
             _isMoving = true;
         }
-        else if (!movingNow && _isMoving)
+        else if (_isMoving)
         {
             OnStop?.Invoke();
             _isMoving = false;

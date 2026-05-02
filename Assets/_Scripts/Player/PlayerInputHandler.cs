@@ -16,11 +16,35 @@ public class PlayerInputHandler : MonoBehaviour
     public event Action<bool> OnSprintInput;
 
     private PlayerInput _playerInput;
+    private InputAction _sprintAction;
     private bool _isPaused = false;
 
     private void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
+        _sprintAction = _playerInput.actions["Sprint"];
+    }
+
+    private void OnEnable()
+    {
+        _sprintAction.performed += OnSprintPerformed;
+        _sprintAction.canceled  += OnSprintCanceled;
+    }
+
+    private void OnDisable()
+    {
+        _sprintAction.performed -= OnSprintPerformed;
+        _sprintAction.canceled  -= OnSprintCanceled;
+    }
+
+    private void OnSprintPerformed(InputAction.CallbackContext ctx)
+    {
+        if (!_isPaused) OnSprintInput?.Invoke(true);
+    }
+
+    private void OnSprintCanceled(InputAction.CallbackContext ctx)
+    {
+        OnSprintInput?.Invoke(false);
     }
 
     public void OnMove(InputValue value)
@@ -39,11 +63,8 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
-    public void OnSprint(InputValue value)
-    {
-        if (_isPaused) return;
-        OnSprintInput?.Invoke(value.isPressed);
-    }
+    // Mantido para compatibilidade com SendMessages, mas o sprint agora usa callbacks diretos
+    public void OnSprint(InputValue value) { }
 
     private void HandlePauseChanged(bool paused)
     {
