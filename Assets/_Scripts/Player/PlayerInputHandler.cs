@@ -14,6 +14,7 @@ public class PlayerInputHandler : MonoBehaviour
     public event Action<Vector2> OnMoveInput;
     public event Action OnAbilityInput;
     public event Action<bool> OnSprintInput;
+    public event Action OnInteractInput;
 
     private PlayerInput _playerInput;
     private InputAction _sprintAction;
@@ -63,10 +64,16 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
+    public void OnInteract(InputValue value)
+    {
+        if (_isPaused) return;
+        if (value.isPressed) OnInteractInput?.Invoke();
+    }
+
     // Mantido para compatibilidade com SendMessages, mas o sprint agora usa callbacks diretos
     public void OnSprint(InputValue value) { }
 
-    private void HandlePauseChanged(bool paused)
+    public void SetPaused(bool paused)
     {
         _isPaused = paused;
     }

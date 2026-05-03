@@ -17,6 +17,8 @@ public class MicrophoneRecorder : MonoBehaviour
     public UnityEvent OnRecordingStarted;
     public UnityEvent OnRecordingFinished;
 
+    // Habilitado pelo SoundMatchChecker quando uma quest está ativa
+    public bool AllowRecording { get; set; } = false;
     public bool IsRecording { get; private set; }
     public AudioClip LastRecordedClip { get; private set; }
     public AudioSource MicAudioSource { get; private set; }
@@ -62,7 +64,7 @@ public class MicrophoneRecorder : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current != null && Keyboard.current[recordKey].wasPressedThisFrame)
+        if (AllowRecording && Keyboard.current != null && Keyboard.current[recordKey].wasPressedThisFrame)
         {
             if (!IsRecording)
                 StartRecording();

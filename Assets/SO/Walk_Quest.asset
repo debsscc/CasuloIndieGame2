@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2fd099b41d77b41a14f955c8524ba8, type: 3}
+  m_Name: Walk_Quest
+  m_EditorClassIdentifier: Assembly-CSharp::QuestSO
+  questTitle: 'Som de Caminhada '
+  description: O personagem precisa de um som pra caminhar!
+  hint: Diga "toc toc toc" com a boca, ou bata os dedos na mesa
+  soundProfile: {fileID: 11400000, guid: a8bb9045c7b48614ea2bfe091d3c91d2, type: 2}
+  recordingTimeLimit: 4
+  rewardScore: 100

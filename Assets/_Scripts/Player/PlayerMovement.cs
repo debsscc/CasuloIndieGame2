@@ -51,6 +51,18 @@ public class PlayerMovement : MonoBehaviour
         _input.OnSprintInput -= HandleSprintInput;
     }
 
+    private bool _isMovementBlocked = false;
+
+    public void SetMovementBlocked(bool blocked)
+    {
+        _isMovementBlocked = blocked;
+        if (blocked)
+        {
+            _moveDirection = Vector2.zero;
+            _rb.linearVelocity = Vector2.zero;
+        }
+    }
+
     public void HandleMoveInput(Vector2 direction)
     {
         _moveDirection = direction;
@@ -93,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (_isMovementBlocked) return;
         float currentSpeed = _isRunning ? speed * runSpeedMultiplier : speed;
         _rb.linearVelocity = _moveDirection * currentSpeed;
     }

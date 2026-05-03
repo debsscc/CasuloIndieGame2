@@ -1,3 +1,9 @@
+///* ----------------------------------------------------------------
+// CRIADO EM: 2026-05
+// DESCRIÇÃO: Controla a camera para seguir o jogador.
+// ---------------------------------------------------------------- */
+
+
 using UnityEngine;
 using Unity.Cinemachine;
 using System.Collections;
