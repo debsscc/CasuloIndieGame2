@@ -7,6 +7,9 @@ public class AudioPlayback : MonoBehaviour
     [Header("Refs")]
     [SerializeField] private MicrophoneRecorder micRecorder;
 
+    [Header("Configurações")]
+    [SerializeField] [Range(0f, 1f)] private float volume = 1f;
+
     [Header("Eventos")]
     public UnityEvent OnPlaybackStarted;
     public UnityEvent<AudioClip> OnPlaybackFinished;
@@ -39,6 +42,7 @@ public class AudioPlayback : MonoBehaviour
         if (clip == null) return;
 
         currentClip = clip;
+        audioSource.volume = volume;
         audioSource.clip = clip;
         audioSource.Play();
         OnPlaybackStarted?.Invoke();

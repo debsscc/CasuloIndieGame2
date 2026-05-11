@@ -9,22 +9,39 @@ using UnityEngine.Events;
 
 public class NpcQuestGiver : MonoBehaviour
 {
+    [Header("Identidade")]
+    [SerializeField] private string npcId; // único por NPC, ex: "NPC_Floresta_01"
+
     [Header("Refs")]
     [SerializeField] private SoundMatchChecker soundMatchChecker;
-    [SerializeField] private QuestUI questUI;
-    [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private AudioPlayback audioPlayback;
-    [SerializeField] private FootstepPlayer footstepPlayer;
+    [SerializeField] private QuestUI questUI; // opcional: auto-resolve via QuestUI.Instance
 
     [Header("Quest")]
     [SerializeField] private QuestSO quest;
 
     [Header("Eventos")]
     public UnityEvent OnQuestStarted;
-    public UnityEvent OnQuestCompleted;   // sucesso — avança diálogo, toca animação, etc.
-    public UnityEvent OnQuestFailed;      // falhou — mostra hint, permite nova tentativa
+    public UnityEvent OnRecordingBegan;              // grave: bloqueie o player aqui
+    public UnityEvent<AudioClip> OnQuestCompleted;   // passa o clip gravado aos ouvintes
+    public UnityEvent OnQuestFailed;                 // libere o player aqui
+    public UnityEvent OnQuestAlreadyDone;            // opcional: reação visual quando já concluída
 
     private bool questActive = false;
+    private bool questCompleted = false;
+
+    private static readonly string SavePrefix = "Quest_";
+
+    private void Awake()
+    {
+        if (questUI == null)
+            questUI = QuestUI.Instance;
+
+        // Restaura estado salvo
+        if (!string.IsNullOrEmpty(npcId))
+            questCompleted = PlayerPrefs.GetInt(SavePrefix + npcId, 0) == 1;
+    }
+
+    public bool IsCompleted => questCompleted;
 
     // ----------------------------------------------------------------
     // Chamado pelo jogador ao interagir (PlayerInteracion, trigger, botão, etc.)
@@ -34,6 +51,12 @@ public class NpcQuestGiver : MonoBehaviour
         if (quest == null)
         {
             Debug.LogWarning("[NpcQuestGiver] Nenhuma quest atribuída.");
+            return;
+        }
+
+        if (questCompleted)
+        {
+            OnQuestAlreadyDone?.Invoke();
             return;
         }
 
@@ -61,9 +84,6 @@ public class NpcQuestGiver : MonoBehaviour
 
         soundMatchChecker.SetActiveQuest(quest);
         soundMatchChecker.micRecorder.OnRecordingStarted.AddListener(OnRecordingStarted);
-        soundMatchChecker.micRecorder.OnRecordingFinished.AddListener(OnRecordingFinished);
-        // painel já está aberto pelo ShowPreview — não reabre
-
         soundMatchChecker.OnMatchSuccess.AddListener(HandleSuccess);
         soundMatchChecker.OnMatchFail.AddListener(HandleFail);
 
@@ -73,31 +93,25 @@ public class NpcQuestGiver : MonoBehaviour
 
     private void OnRecordingStarted()
     {
-        playerMovement?.SetMovementBlocked(true);
-    }
-
-    private void OnRecordingFinished()
-    {
-        playerMovement?.SetMovementBlocked(false);
+        OnRecordingBegan?.Invoke();
     }
 
     private void HandleSuccess(float score)
     {
         questActive = false;
-        Unsubscribe();
+        questCompleted = true;
 
-        // Toca o som gravado de volta para o jogador ouvir
-        audioPlayback?.PlayLastRecording();
+        if (!string.IsNullOrEmpty(npcId))
+            PlayerPrefs.SetInt(SavePrefix + npcId, 1);
 
-        // Entrega o clip para o sistema de passos
         var clip = soundMatchChecker.micRecorder.LastRecordedClip;
-        footstepPlayer?.SetFootstepClip(clip);
+        Unsubscribe();
 
         questUI?.ShowSuccess(score);
         questUI?.HideAfterFeedback();
 
         Debug.Log($"[NpcQuestGiver] Quest concluída! Score: {score:P0}");
-        OnQuestCompleted?.Invoke();
+        OnQuestCompleted?.Invoke(clip); // ouvintes recebem o clip: FootstepPlayer, AudioPlayback, etc.
     }
 
     private void HandleFail(float score)
@@ -106,7 +120,7 @@ public class NpcQuestGiver : MonoBehaviour
         questUI?.ShowHint(quest.hint);
 
         Debug.Log($"[NpcQuestGiver] Errou. Score: {score:P0}. Hint exibido.");
-        OnQuestFailed?.Invoke();
+        OnQuestFailed?.Invoke(); // ouvinte: PlayerMovement.SetMovementBlocked(false)
     }
 
     // ----------------------------------------------------------------
@@ -129,8 +143,6 @@ public class NpcQuestGiver : MonoBehaviour
         soundMatchChecker.OnMatchSuccess.RemoveListener(HandleSuccess);
         soundMatchChecker.OnMatchFail.RemoveListener(HandleFail);
         soundMatchChecker.micRecorder.OnRecordingStarted.RemoveListener(OnRecordingStarted);
-        soundMatchChecker.micRecorder.OnRecordingFinished.RemoveListener(OnRecordingFinished);
-        playerMovement?.SetMovementBlocked(false);
     }
 
     private void OnDisable() => CancelQuest();

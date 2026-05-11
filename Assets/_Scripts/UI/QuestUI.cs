@@ -11,6 +11,8 @@ using TMPro;
 [RequireComponent(typeof(CanvasGroup))]
 public class QuestUI : MonoBehaviour
 {
+    public static QuestUI Instance { get; private set; }
+
     [Header("Painel")]
     [SerializeField] private RectTransform panelRect;
 
@@ -38,6 +40,8 @@ public class QuestUI : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
+
         canvasGroup = GetComponent<CanvasGroup>();
         canvasGroup.alpha          = 0f;
         canvasGroup.interactable   = false;

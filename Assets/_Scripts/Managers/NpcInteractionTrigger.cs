@@ -1,20 +1,37 @@
 using UnityEngine;
+using UnityEngine.Events;
 
-// Coloque esse script no mesmo GameObject do NpcQuestGiver.
-// Exige um Collider2D marcado como "Is Trigger" no mesmo GameObject.
-// O jogador precisa ter a tag "Player".
+// O NPC deve ter DOIS Collider2D:
+//   1) Um Collider2D normal (Is Trigger = false) → colisão física com o player
+//   2) Um Collider2D com Is Trigger = true → zona de interação (atribua em "Trigger Collider")
+// O jogador precisa ter a tag "Player" p q isso dê certo tb.
 [RequireComponent(typeof(Collider2D), typeof(NpcQuestGiver))]
 public class NpcInteractionTrigger : MonoBehaviour
 {
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private GameObject interactPrompt; // ex.: balão "Aperte E"
+    [SerializeField] private Collider2D triggerCollider; // arraste aqui o Collider2D com Is Trigger = true
+
+    [Header("Eventos")]
+    public UnityEvent OnPlayerEntered; // wire: PlayerInteracion.SetNpcInRange (via Inspector)
+    public UnityEvent OnPlayerLeft;    // wire: PlayerInteracion.ClearNpcInRange (via Inspector)
 
     private NpcQuestGiver questGiver;
 
     private void Awake()
     {
         questGiver = GetComponent<NpcQuestGiver>();
-        GetComponent<Collider2D>().isTrigger = true;
+
+        if (triggerCollider == null)
+        {
+            foreach (var col in GetComponents<Collider2D>())
+            {
+                if (col.isTrigger) { triggerCollider = col; break; }
+            }
+
+            if (triggerCollider == null)
+                Debug.LogWarning("[NpcInteractionTrigger] Nenhum Collider2D trigger encontrado.", this);
+        }
 
         if (interactPrompt != null)
             interactPrompt.SetActive(false);
@@ -26,9 +43,7 @@ public class NpcInteractionTrigger : MonoBehaviour
 
         if (interactPrompt != null) interactPrompt.SetActive(true);
         questGiver.ShowPreview();
-
-        var interaction = other.GetComponent<PlayerInteracion>();
-        if (interaction != null) interaction.SetNpcInRange(questGiver);
+        OnPlayerEntered?.Invoke();
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -37,8 +52,6 @@ public class NpcInteractionTrigger : MonoBehaviour
 
         if (interactPrompt != null) interactPrompt.SetActive(false);
         questGiver.HidePreview();
-
-        var interaction = other.GetComponent<PlayerInteracion>();
-        if (interaction != null) interaction.ClearNpcInRange(questGiver);
+        OnPlayerLeft?.Invoke();
     }
 }

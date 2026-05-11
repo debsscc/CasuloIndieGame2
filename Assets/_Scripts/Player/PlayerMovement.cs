@@ -60,11 +60,20 @@ public class PlayerMovement : MonoBehaviour
         {
             _moveDirection = Vector2.zero;
             _rb.linearVelocity = Vector2.zero;
+
+            // Para a animação imediatamente
+            if (_isMoving)
+            {
+                OnStop?.Invoke();
+                _isMoving = false;
+            }
         }
     }
 
     public void HandleMoveInput(Vector2 direction)
     {
+        if (_isMovementBlocked) return; // ignora input de movimento e animação
+
         _moveDirection = direction;
         
         // Dispara eventos OnMovement / OnStop

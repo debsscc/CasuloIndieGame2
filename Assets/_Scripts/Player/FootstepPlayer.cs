@@ -13,6 +13,7 @@ public class FootstepPlayer : MonoBehaviour
     [Header("Configurações")]
     [SerializeField] private float stepInterval = 0.4f;       // segundos entre cada passo
     [SerializeField] private float runStepInterval = 0.25f;   // intervalo menor ao correr
+    [SerializeField] [Range(0f, 1f)] private float volume = 1f;
 
     private AudioSource audioSource;
     private PlayerMovement playerMovement;
@@ -43,9 +44,11 @@ public class FootstepPlayer : MonoBehaviour
         playerMovement.OnSprintChanged -= HandleSprint;
     }
 
-    // Chamado pelo NpcQuestGiver.OnQuestCompleted via código ou Inspector
+    // Chamado pelo NpcQuestGiver.OnQuestCompleted via código ou Inspector.
+    // Só aceita o clip uma vez — após a quest ser concluída, fica salvo permanentemente.
     public void SetFootstepClip(AudioClip clip)
     {
+        if (footstepClip != null) return;
         footstepClip = clip;
         Debug.Log("[FootstepPlayer] Clip de passo definido: " + clip?.name);
     }
@@ -84,6 +87,7 @@ public class FootstepPlayer : MonoBehaviour
     private void PlayStep()
     {
         if (footstepClip == null || audioSource == null) return;
-        audioSource.PlayOneShot(footstepClip);
+        audioSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+        audioSource.PlayOneShot(footstepClip, volume);
     }
 }
