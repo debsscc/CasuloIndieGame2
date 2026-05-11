@@ -15,6 +15,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject mapaPanel;
     // QuestPanel não entra aqui — é controlado pelo NpcQuestGiver
 
+    [Header("Sons")]
+    [SerializeField] private AudioSource uiAudioSource;
+    [SerializeField] private AudioClip diarioOpenSound;
+
     private GameObject currentOpenPanel;
 
     private void Awake()
@@ -24,7 +28,10 @@ public class UIManager : MonoBehaviour
     }
 
     private void Start(){
-        CloseAll();
+        if (pausePanel   != null) pausePanel.SetActive(false);
+        if (diarioPanel  != null) diarioPanel.SetActive(false);
+        if (mapaPanel    != null) mapaPanel.SetActive(false);
+        currentOpenPanel = null;
     }
 
     private void OpenPanel(GameObject panel){
@@ -49,7 +56,12 @@ public class UIManager : MonoBehaviour
     }
     public void ToggleDiario(){
         if (currentOpenPanel == diarioPanel) ClosePanel(diarioPanel);
-        else OpenPanel(diarioPanel);
+        else
+        {
+            OpenPanel(diarioPanel);
+            if (uiAudioSource != null && diarioOpenSound != null)
+                uiAudioSource.PlayOneShot(diarioOpenSound);
+        }
     }
     public void ToggleMapa(){
         if (currentOpenPanel == mapaPanel) ClosePanel(mapaPanel);

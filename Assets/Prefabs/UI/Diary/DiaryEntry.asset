@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab92d48a6ef463d41ad575ce84517fba, type: 3}
+  m_Name: DiaryEntry
+  m_EditorClassIdentifier: Assembly-CSharp::DiaryEntrySO
+  entryId: DIARY_01
+  entryTitle: Um som estranho na floresta
+  entryText: "Enquanto caminhava pela floresta hoje, ouvi um som que n\xE3o consigo
+    tirar da cabe\xE7a. N\xE3o era vento, n\xE3o era animal. Era quase como um chamado.
+    Preciso descobrir de onde vem."
