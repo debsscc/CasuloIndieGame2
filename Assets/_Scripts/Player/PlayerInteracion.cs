@@ -28,7 +28,11 @@ public class PlayerInteracion : MonoBehaviour
     }
 
     // Chamado pelo NpcInteractionTrigger quando o player entra na área
-    public void SetNpcInRange(NpcQuestGiver npc) => currentNpc = npc;
+    public void SetNpcInRange(NpcQuestGiver npc)
+    {
+        currentNpc = npc;
+        Debug.Log($"[PlayerInteracion] NPC em range: {npc?.name}");
+    }
 
     // Chamado pelo NpcInteractionTrigger quando o player sai da área
     public void ClearNpcInRange(NpcQuestGiver npc)
@@ -42,6 +46,8 @@ public class PlayerInteracion : MonoBehaviour
 
     private void HandleInteract()
     {
+        string npcName = currentNpc != null ? currentNpc.name : "NULL";
+        Debug.Log($"[PlayerInteracion] HandleInteract chamado. currentNpc={npcName}");
         currentNpc?.Interact();
     }
 }

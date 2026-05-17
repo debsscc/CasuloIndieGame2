@@ -41,14 +41,23 @@ public class NpcInteractionTrigger : MonoBehaviour
     {
         if (!other.CompareTag(playerTag)) return;
 
+        Debug.Log($"[NpcInteractionTrigger] Player entrou no trigger. other={other.name}", this);
+
+        var interaction = other.GetComponentInParent<PlayerInteracion>();
+        if (interaction == null)
+            Debug.LogError("[NpcInteractionTrigger] PlayerInteracion NAO encontrado no player! Verifique se o componente existe no GameObject do player.", this);
+        else
+            interaction.SetNpcInRange(questGiver);
+
         if (interactPrompt != null) interactPrompt.SetActive(true);
-        questGiver.ShowPreview();
         OnPlayerEntered?.Invoke();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (!other.CompareTag(playerTag)) return;
+
+        other.GetComponentInParent<PlayerInteracion>()?.ClearNpcInRange(questGiver);
 
         if (interactPrompt != null) interactPrompt.SetActive(false);
         questGiver.HidePreview();

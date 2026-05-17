@@ -19,6 +19,8 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerInput _playerInput;
     private InputAction _sprintAction;
     private bool _isPaused = false;
+    // Bloqueia só movimento/sprint — sem afetar Interact e Ability
+    private bool _isMovementBlocked = false;
 
     private void Awake()
     {
@@ -40,7 +42,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void OnSprintPerformed(InputAction.CallbackContext ctx)
     {
-        if (!_isPaused) OnSprintInput?.Invoke(true);
+        if (!_isPaused && !_isMovementBlocked) OnSprintInput?.Invoke(true);
     }
 
     private void OnSprintCanceled(InputAction.CallbackContext ctx)
@@ -50,7 +52,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        if (_isPaused) return;
+        if (_isPaused || _isMovementBlocked) return;
         OnMoveInput?.Invoke(value.Get<Vector2>());
     }
 
@@ -76,5 +78,14 @@ public class PlayerInputHandler : MonoBehaviour
     public void SetPaused(bool paused)
     {
         _isPaused = paused;
+    }
+
+    // Bloqueia apenas movimento (OnMove + Sprint) sem afetar Interact/Ability.
+    // Use isto para travar o player sem impedir interações de UI/NPC.
+    public void SetMovementInputBlocked(bool blocked)
+    {
+        _isMovementBlocked = blocked;
+        // Garante que o evento de parar seja disparado ao bloquear
+        if (blocked) OnMoveInput?.Invoke(Vector2.zero);
     }
 }

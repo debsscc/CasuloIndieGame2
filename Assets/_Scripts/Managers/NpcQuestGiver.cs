@@ -12,6 +12,10 @@ public class NpcQuestGiver : MonoBehaviour
     [Header("Identidade")]
     [SerializeField] private string npcId; // único por NPC, ex: "NPC_Floresta_01"
 
+    [Header("Debug")]
+    [Tooltip("Reseta o estado salvo desta quest ao iniciar o Play Mode (só para testes)")]
+    [SerializeField] private bool resetQuestOnStart = false;
+
     [Header("Refs")]
     [SerializeField] private SoundMatchChecker soundMatchChecker;
     [SerializeField] private QuestUI questUI; // opcional: auto-resolve via QuestUI.Instance
@@ -36,9 +40,17 @@ public class NpcQuestGiver : MonoBehaviour
         if (questUI == null)
             questUI = QuestUI.Instance;
 
+        if (string.IsNullOrEmpty(npcId))
+            Debug.LogWarning("[NpcQuestGiver] npcId está vazio! Defina um ID único no Inspector para salvar o estado corretamente.", this);
+
         // Restaura estado salvo
         if (!string.IsNullOrEmpty(npcId))
+        {
+            if (resetQuestOnStart)
+                PlayerPrefs.DeleteKey(SavePrefix + npcId);
+
             questCompleted = PlayerPrefs.GetInt(SavePrefix + npcId, 0) == 1;
+        }
     }
 
     public bool IsCompleted => questCompleted;
@@ -48,9 +60,11 @@ public class NpcQuestGiver : MonoBehaviour
     // ----------------------------------------------------------------
     public void Interact()
     {
+        Debug.Log($"[NpcQuestGiver] Interact() chamado. questActive={questActive} questCompleted={questCompleted} quest={quest?.questTitle ?? "NULL"}", this);
+
         if (quest == null)
         {
-            Debug.LogWarning("[NpcQuestGiver] Nenhuma quest atribuída.");
+            Debug.LogError("[NpcQuestGiver] quest (QuestSO) é NULL. Atribua no Inspector do NPC1.prefab.", this);
             return;
         }
 
@@ -65,11 +79,8 @@ public class NpcQuestGiver : MonoBehaviour
     }
 
     // Chamado pelo NpcInteractionTrigger quando o player entra na área
-    public void ShowPreview()
-    {
-        if (quest == null) return;
-        questUI?.Show(quest.questTitle, quest.description);
-    }
+    // Não abre mais o painel automaticamente — o painel só abre ao pressionar E
+    public void ShowPreview() { }
 
     // Chamado pelo NpcInteractionTrigger quando o player sai sem interagir
     public void HidePreview()
@@ -81,6 +92,20 @@ public class NpcQuestGiver : MonoBehaviour
     private void StartQuest()
     {
         questActive = true;
+
+        // Auto-resolve questUI se ainda null
+        if (questUI == null) questUI = QuestUI.Instance;
+        if (questUI == null)
+            Debug.LogError("[NpcQuestGiver] QuestUI é NULL. Verifique se QuestUI existe na cena.", this);
+
+        questUI?.Show(quest.questTitle, quest.description);
+        Debug.Log($"[NpcQuestGiver] StartQuest: abrindo painel '{quest.questTitle}'. questUI={questUI}, soundMatchChecker={soundMatchChecker}", this);
+
+        if (soundMatchChecker == null)
+        {
+            Debug.LogError("[NpcQuestGiver] soundMatchChecker é NULL. Atribua no Inspector do NPC1.prefab.", this);
+            return;
+        }
 
         soundMatchChecker.SetActiveQuest(quest);
         soundMatchChecker.micRecorder.OnRecordingStarted.AddListener(OnRecordingStarted);

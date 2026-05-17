@@ -161,6 +161,17 @@ public class QuestUI : MonoBehaviour
     {
         float fromAlpha = canvasGroup.alpha;
         float toAlpha   = open ? 1f : 0f;
+
+        // Garante panelRect — sem ele o coroutine crashava e alpha ficava em 0
+        if (panelRect == null)
+        {
+            canvasGroup.alpha          = toAlpha;
+            canvasGroup.interactable   = open;
+            canvasGroup.blocksRaycasts = open;
+            panelCoroutine = null;
+            yield break;
+        }
+
         Vector3 fromScale = panelRect.localScale;
         Vector3 toScale   = open ? Vector3.one : new Vector3(0.85f, 0.85f, 1f);
 

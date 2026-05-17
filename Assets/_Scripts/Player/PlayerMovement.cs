@@ -51,7 +51,8 @@ public class PlayerMovement : MonoBehaviour
         _input.OnSprintInput -= HandleSprintInput;
     }
 
-    private bool _isMovementBlocked = false;
+    // Bloqueado por padrão — liberado pelo NpcVoiceGiver após confirmar a gravação
+    private bool _isMovementBlocked = true;
 
     public void SetMovementBlocked(bool blocked)
     {

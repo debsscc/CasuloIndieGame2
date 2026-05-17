@@ -710,6 +710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioPlayback
   micRecorder: {fileID: 0}
+  volume: 1
   OnPlaybackStarted:
     m_PersistentCalls:
       m_Calls: []
