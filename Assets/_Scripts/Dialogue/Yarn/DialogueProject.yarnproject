@@ -1,0 +1,22 @@
+{
+    "projectFileVersion": 3,
+    "sourceFiles": [
+        "**/*.yarn"
+    ],
+    "excludeFiles": [
+        "**/*~/*",
+        "./Samples/Yarn Spinner*/*"
+    ],
+    "baseLanguage": "pt",
+    "compilerOptions": {
+        "yarnScriptEditor": {
+            "projectName": "CasuloGame2",
+            "authorName": [
+                "DebsSieburgerCarvalho"
+            ],
+            "previewFontSize": 8,
+            "characters": []
+        }
+    },
+    "definitionsFiles": []
+}

@@ -1,6 +1,8 @@
-///* ----------------------------------------------------------------
- // CRIADO EM: 2026-05
- // DESCRIÇÃO: Utilitário pra analisar um AudioClip gravado e extrair características do som.
+//----------------------------------------------------------------
+// CRIADO EM: 2026-05
+// FEITO POR: Debs Carvalho
+// DESCRIÇÃO: Utilitário para analisar um AudioClip gravado e extrair características do som.
+// ----------------------------------------------------------------
 
 using UnityEngine;
 

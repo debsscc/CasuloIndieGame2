@@ -39,7 +39,17 @@ public class UIWaveVisualizer : MonoBehaviour
             currentHeights = new float[bars.Length];
             targetHeights  = new float[bars.Length];
             for (int i = 0; i < bars.Length; i++)
+            {
                 currentHeights[i] = minHeight;
+
+                // Garante que a barra cresce para cima a partir da base
+                if (bars[i] != null)
+                {
+                    var pivot  = bars[i].pivot;
+                    pivot.y    = 0f;
+                    bars[i].pivot = pivot;
+                }
+            }
         }
     }
 

@@ -1,0 +1,1859 @@
+fileFormatVersion: 2
+guid: 03e5d1802cb2dc843accb012449cdfa4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -578016285945706825
+    second: foliage_pack_0
+  - first:
+      213: 6590427925617598223
+    second: foliage_pack_1
+  - first:
+      213: 3787988627795636320
+    second: foliage_pack_2
+  - first:
+      213: -5759571546574543233
+    second: foliage_pack_3
+  - first:
+      213: 1167431231652714939
+    second: foliage_pack_4
+  - first:
+      213: 3223515140401081000
+    second: foliage_pack_5
+  - first:
+      213: -2328696186150741641
+    second: foliage_pack_6
+  - first:
+      213: -4775040150671890837
+    second: foliage_pack_7
+  - first:
+      213: -3443725143969822681
+    second: foliage_pack_8
+  - first:
+      213: -3064509857409567294
+    second: foliage_pack_9
+  - first:
+      213: 1457722562830889895
+    second: foliage_pack_10
+  - first:
+      213: 8027722699339257132
+    second: foliage_pack_11
+  - first:
+      213: -3999388750890834974
+    second: foliage_pack_12
+  - first:
+      213: -3411688720189158922
+    second: foliage_pack_13
+  - first:
+      213: 6808647670599122521
+    second: foliage_pack_14
+  - first:
+      213: 3540265859284621559
+    second: foliage_pack_15
+  - first:
+      213: -7411456717133506885
+    second: foliage_pack_16
+  - first:
+      213: -4033319126349104162
+    second: foliage_pack_17
+  - first:
+      213: -434543893495045280
+    second: foliage_pack_18
+  - first:
+      213: 9133136419304405078
+    second: foliage_pack_19
+  - first:
+      213: -2140559653630479287
+    second: foliage_pack_20
+  - first:
+      213: 3291642167525609547
+    second: foliage_pack_21
+  - first:
+      213: -9204000097556280406
+    second: foliage_pack_22
+  - first:
+      213: -1544831894938010864
+    second: foliage_pack_23
+  - first:
+      213: -63568877935845796
+    second: foliage_pack_24
+  - first:
+      213: -4565191472587957757
+    second: foliage_pack_25
+  - first:
+      213: -1416464787184064987
+    second: foliage_pack_26
+  - first:
+      213: 944457911089949609
+    second: foliage_pack_27
+  - first:
+      213: 6805968617614939543
+    second: foliage_pack_28
+  - first:
+      213: -7404433902648617163
+    second: foliage_pack_29
+  - first:
+      213: 4827322423254220520
+    second: foliage_pack_30
+  - first:
+      213: 94317474978028805
+    second: foliage_pack_31
+  - first:
+      213: 9099079046029399685
+    second: foliage_pack_32
+  - first:
+      213: -555038212983801844
+    second: foliage_pack_33
+  - first:
+      213: 7388539230031374728
+    second: foliage_pack_34
+  - first:
+      213: -3897441212836704942
+    second: foliage_pack_35
+  - first:
+      213: 3673415778013476241
+    second: foliage_pack_36
+  - first:
+      213: 7793165595884530946
+    second: foliage_pack_37
+  - first:
+      213: 7311438139604831993
+    second: foliage_pack_38
+  - first:
+      213: 4857721902918562833
+    second: foliage_pack_39
+  - first:
+      213: 7572013909205445042
+    second: foliage_pack_40
+  - first:
+      213: -901782843593938644
+    second: foliage_pack_41
+  - first:
+      213: 4176541437360224650
+    second: foliage_pack_42
+  - first:
+      213: -151252728091183678
+    second: foliage_pack_43
+  - first:
+      213: -4071979816981475977
+    second: foliage_pack_44
+  - first:
+      213: 422875492419748915
+    second: foliage_pack_45
+  - first:
+      213: -3716525598984757479
+    second: foliage_pack_46
+  - first:
+      213: -8667537418538103899
+    second: foliage_pack_47
+  - first:
+      213: -5072506858948224547
+    second: foliage_pack_48
+  - first:
+      213: -5896962665187919787
+    second: foliage_pack_49
+  - first:
+      213: -6077776740129420721
+    second: foliage_pack_50
+  - first:
+      213: 1593162095764667057
+    second: foliage_pack_51
+  - first:
+      213: 4962881856896469937
+    second: foliage_pack_52
+  - first:
+      213: 3244604702268661000
+    second: foliage_pack_53
+  - first:
+      213: 7214165489824161794
+    second: foliage_pack_54
+  - first:
+      213: -7886328870967231779
+    second: foliage_pack_55
+  - first:
+      213: 257113654467562566
+    second: foliage_pack_56
+  - first:
+      213: 1643414002733250075
+    second: foliage_pack_57
+  - first:
+      213: 5829042220105457544
+    second: foliage_pack_58
+  - first:
+      213: 3640051147104466371
+    second: foliage_pack_59
+  - first:
+      213: -2181665419632494894
+    second: foliage_pack_60
+  - first:
+      213: -410793704499577082
+    second: foliage_pack_61
+  - first:
+      213: 367563580909142826
+    second: foliage_pack_62
+  - first:
+      213: 1771305119643606698
+    second: foliage_pack_63
+  - first:
+      213: -4965736061175044288
+    second: foliage_pack_64
+  - first:
+      213: -7892749950744905254
+    second: foliage_pack_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: foliage_pack_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6c0d910497af7f0800000000000000
+      internalID: -578016285945706825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 287
+        width: 50
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f5040e747e57b50800000000000000
+      internalID: 6590427925617598223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 271
+        width: 18
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0607afc5693a19430800000000000000
+      internalID: 3787988627795636320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_3
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 287
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f762af3a134e110b0800000000000000
+      internalID: -5759571546574543233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_4
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 276
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb95b56158c833010800000000000000
+      internalID: 1167431231652714939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 292
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa23b7f0f93cbc20800000000000000
+      internalID: 3223515140401081000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_6
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 292
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7799daa182fceafd0800000000000000
+      internalID: -2328696186150741641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_7
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 306
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6669fe3846abbdb0800000000000000
+      internalID: -4775040150671890837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72809992a3e6530d0800000000000000
+      internalID: -3443725143969822681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_9
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 255
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c57b6a658ca875d0800000000000000
+      internalID: -3064509857409567294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 263
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a37b9292feda3410800000000000000
+      internalID: 1457722562830889895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_11
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 287
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c25d4792343386f60800000000000000
+      internalID: 8027722699339257132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_12
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 255
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e36578ee115f78c0800000000000000
+      internalID: -3999388750890834974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_13
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 271
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f90be45f2f37a0d0800000000000000
+      internalID: -3411688720189158922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_14
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 252
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ef9de8bfc2d7e50800000000000000
+      internalID: 6808647670599122521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_15
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 223
+        width: 81
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f85a19ba0d812130800000000000000
+      internalID: 3540265859284621559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_16
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 234
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb613132267352990800000000000000
+      internalID: -7411456717133506885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_17
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 257
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb3c20cf95c608c0800000000000000
+      internalID: -4033319126349104162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_18
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 246
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063a9e491a038f9f0800000000000000
+      internalID: -434543893495045280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65872d51f2b6fbe70800000000000000
+      internalID: 9133136419304405078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_20
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 239
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94472d016543b42e0800000000000000
+      internalID: -2140559653630479287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_21
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 240
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b409f0b8c134ead20800000000000000
+      internalID: 3291642167525609547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_22
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 241
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab4f781da2d44080800000000000000
+      internalID: -9204000097556280406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 246
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01bb6809397af8ae0800000000000000
+      internalID: -1544831894938010864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_24
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 239
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e1ddb31782e1ff0800000000000000
+      internalID: -63568877935845796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_25
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 243
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a90c80b8e25a0c0800000000000000
+      internalID: -4565191472587957757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5266b03e7c4b75ce0800000000000000
+      internalID: -1416464787184064987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_27
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 127
+        width: 50
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abe2d757736b1d00800000000000000
+      internalID: 944457911089949609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_28
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 207
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795156de568a37e50800000000000000
+      internalID: 6805968617614939543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 208
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53715cd889a2e3990800000000000000
+      internalID: -7404433902648617163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_30
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 223
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee785eea281ef240800000000000000
+      internalID: 4827322423254220520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_31
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 224
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d5d286e351f4100800000000000000
+      internalID: 94317474978028805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_32
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 160
+        width: 49
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58658c1fe2c664e70800000000000000
+      internalID: 9099079046029399685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_33
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 208
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08355e9fab1c48f0800000000000000
+      internalID: -555038212983801844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_34
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 215
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889ee07984d598660800000000000000
+      internalID: 7388539230031374728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_35
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 208
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d86efcdd189e9c0800000000000000
+      internalID: -3897441212836704942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_36
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 211
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195fec000389af230800000000000000
+      internalID: 3673415778013476241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_37
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d2e7ac1d2e62c60800000000000000
+      internalID: 7793165595884530946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_38
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 215
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe83641042777560800000000000000
+      internalID: 7311438139604831993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_39
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 200
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114781955581a6340800000000000000
+      internalID: 4857721902918562833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_40
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 200
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9e18c3882351960800000000000000
+      internalID: 7572013909205445042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_41
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 159
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29aa0718493c73f0800000000000000
+      internalID: -901782843593938644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_42
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 159
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a893e8b1f4e06f930800000000000000
+      internalID: 4176541437360224650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_43
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 182
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5f0d6f174a6edf0800000000000000
+      internalID: -151252728091183678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 159
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d42444eeb6d77c0800000000000000
+      internalID: -4071979816981475977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334c5e5150b5ed500800000000000000
+      internalID: 422875492419748915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_46
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 111
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f1ed1a8af3c6cc0800000000000000
+      internalID: -3716525598984757479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_47
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 112
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab41a2f3a8b6b780800000000000000
+      internalID: -8667537418538103899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_48
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 127
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd998a713e5da99b0800000000000000
+      internalID: -5072506858948224547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_49
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 106
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558bbbf03b7c92ea0800000000000000
+      internalID: -5896962665187919787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_50
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 122
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a447c914667aba0800000000000000
+      internalID: -6077776740129420721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_51
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba7ba33c7c0c1610800000000000000
+      internalID: 1593162095764667057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb8b8e11c2bfd440800000000000000
+      internalID: 4962881856896469937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_53
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 96
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d194b39c6270d20800000000000000
+      internalID: 3244604702268661000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_54
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 96
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 200e9db6a4ddd1460800000000000000
+      internalID: 7214165489824161794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda3718eca12e8290800000000000000
+      internalID: -7886328870967231779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_56
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 79
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64c0179a183719300800000000000000
+      internalID: 257113654467562566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 79
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1671db04549ec610800000000000000
+      internalID: 1643414002733250075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_58
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 79
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fd32ef30be4e050800000000000000
+      internalID: 5829042220105457544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_59
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 64
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c53a638b3f048230800000000000000
+      internalID: 3640051147104466371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_60
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 59
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d63d0c1cda29b1e0800000000000000
+      internalID: -2181665419632494894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_61
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 0
+        width: 59
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ff55f5d419c4af0800000000000000
+      internalID: -410793704499577082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_62
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 0
+        width: 59
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23c5702129d91500800000000000000
+      internalID: 367563580909142826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_63
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae103d1f90f49810800000000000000
+      internalID: 1771305119643606698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_64
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 33
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0476059ac59261bb0800000000000000
+      internalID: -4965736061175044288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foliage_pack_65
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad93ed4ccb1577290800000000000000
+      internalID: -7892749950744905254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      foliage_pack_0: -578016285945706825
+      foliage_pack_1: 6590427925617598223
+      foliage_pack_10: 1457722562830889895
+      foliage_pack_11: 8027722699339257132
+      foliage_pack_12: -3999388750890834974
+      foliage_pack_13: -3411688720189158922
+      foliage_pack_14: 6808647670599122521
+      foliage_pack_15: 3540265859284621559
+      foliage_pack_16: -7411456717133506885
+      foliage_pack_17: -4033319126349104162
+      foliage_pack_18: -434543893495045280
+      foliage_pack_19: 9133136419304405078
+      foliage_pack_2: 3787988627795636320
+      foliage_pack_20: -2140559653630479287
+      foliage_pack_21: 3291642167525609547
+      foliage_pack_22: -9204000097556280406
+      foliage_pack_23: -1544831894938010864
+      foliage_pack_24: -63568877935845796
+      foliage_pack_25: -4565191472587957757
+      foliage_pack_26: -1416464787184064987
+      foliage_pack_27: 944457911089949609
+      foliage_pack_28: 6805968617614939543
+      foliage_pack_29: -7404433902648617163
+      foliage_pack_3: -5759571546574543233
+      foliage_pack_30: 4827322423254220520
+      foliage_pack_31: 94317474978028805
+      foliage_pack_32: 9099079046029399685
+      foliage_pack_33: -555038212983801844
+      foliage_pack_34: 7388539230031374728
+      foliage_pack_35: -3897441212836704942
+      foliage_pack_36: 3673415778013476241
+      foliage_pack_37: 7793165595884530946
+      foliage_pack_38: 7311438139604831993
+      foliage_pack_39: 4857721902918562833
+      foliage_pack_4: 1167431231652714939
+      foliage_pack_40: 7572013909205445042
+      foliage_pack_41: -901782843593938644
+      foliage_pack_42: 4176541437360224650
+      foliage_pack_43: -151252728091183678
+      foliage_pack_44: -4071979816981475977
+      foliage_pack_45: 422875492419748915
+      foliage_pack_46: -3716525598984757479
+      foliage_pack_47: -8667537418538103899
+      foliage_pack_48: -5072506858948224547
+      foliage_pack_49: -5896962665187919787
+      foliage_pack_5: 3223515140401081000
+      foliage_pack_50: -6077776740129420721
+      foliage_pack_51: 1593162095764667057
+      foliage_pack_52: 4962881856896469937
+      foliage_pack_53: 3244604702268661000
+      foliage_pack_54: 7214165489824161794
+      foliage_pack_55: -7886328870967231779
+      foliage_pack_56: 257113654467562566
+      foliage_pack_57: 1643414002733250075
+      foliage_pack_58: 5829042220105457544
+      foliage_pack_59: 3640051147104466371
+      foliage_pack_6: -2328696186150741641
+      foliage_pack_60: -2181665419632494894
+      foliage_pack_61: -410793704499577082
+      foliage_pack_62: 367563580909142826
+      foliage_pack_63: 1771305119643606698
+      foliage_pack_64: -4965736061175044288
+      foliage_pack_65: -7892749950744905254
+      foliage_pack_7: -4775040150671890837
+      foliage_pack_8: -3443725143969822681
+      foliage_pack_9: -3064509857409567294
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

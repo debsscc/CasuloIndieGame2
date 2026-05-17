@@ -1,26 +1,29 @@
+//------------------------
+// Author: Debs Carvalho
+// Data: 2026-05
+// Description: Component to handle NPC interaction triggers;
+//------------------------
+
 using UnityEngine;
 using UnityEngine.Events;
 
-// O NPC deve ter DOIS Collider2D:
-//   1) Um Collider2D normal (Is Trigger = false) → colisão física com o player
-//   2) Um Collider2D com Is Trigger = true → zona de interação (atribua em "Trigger Collider")
-// O jogador precisa ter a tag "Player" p q isso dê certo tb.
-[RequireComponent(typeof(Collider2D), typeof(NpcQuestGiver))]
+
+[RequireComponent(typeof(Collider2D), typeof(NpcController))]
 public class NpcInteractionTrigger : MonoBehaviour
 {
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private GameObject interactPrompt; // ex.: balão "Aperte E"
-    [SerializeField] private Collider2D triggerCollider; // arraste aqui o Collider2D com Is Trigger = true
+    [SerializeField] private Collider2D triggerCollider;
 
     [Header("Eventos")]
-    public UnityEvent OnPlayerEntered; // wire: PlayerInteracion.SetNpcInRange (via Inspector)
-    public UnityEvent OnPlayerLeft;    // wire: PlayerInteracion.ClearNpcInRange (via Inspector)
+    public UnityEvent OnPlayerEntered;
+    public UnityEvent OnPlayerLeft;
 
-    private NpcQuestGiver questGiver;
+    private NpcController npcController;
 
     private void Awake()
     {
-        questGiver = GetComponent<NpcQuestGiver>();
+        npcController = GetComponent<NpcController>();
 
         if (triggerCollider == null)
         {
@@ -41,13 +44,11 @@ public class NpcInteractionTrigger : MonoBehaviour
     {
         if (!other.CompareTag(playerTag)) return;
 
-        Debug.Log($"[NpcInteractionTrigger] Player entrou no trigger. other={other.name}", this);
-
         var interaction = other.GetComponentInParent<PlayerInteracion>();
         if (interaction == null)
-            Debug.LogError("[NpcInteractionTrigger] PlayerInteracion NAO encontrado no player! Verifique se o componente existe no GameObject do player.", this);
+            Debug.LogError("[NpcInteractionTrigger] PlayerInteracion não encontrado no player!", this);
         else
-            interaction.SetNpcInRange(questGiver);
+            interaction.SetNpcInRange(npcController);
 
         if (interactPrompt != null) interactPrompt.SetActive(true);
         OnPlayerEntered?.Invoke();
@@ -57,10 +58,9 @@ public class NpcInteractionTrigger : MonoBehaviour
     {
         if (!other.CompareTag(playerTag)) return;
 
-        other.GetComponentInParent<PlayerInteracion>()?.ClearNpcInRange(questGiver);
+        other.GetComponentInParent<PlayerInteracion>()?.ClearNpcInRange(npcController);
 
         if (interactPrompt != null) interactPrompt.SetActive(false);
-        questGiver.HidePreview();
         OnPlayerLeft?.Invoke();
     }
 }

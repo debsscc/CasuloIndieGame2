@@ -1,6 +1,6 @@
 ///* ----------------------------------------------------------------
 // CRIADO EM: 2024-06
-// REVISADO POR: Debora Carvalho
+// REVISADO POR: Debs Carvalho
 // DESCRIÇÃO: Controla o movimento do jogador.
 // ---------------------------------------------------------------- */
 

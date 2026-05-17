@@ -1,5 +1,6 @@
 //----------------------------------------------------------------
 // CRIADO EM: 2026-05
+// FEITO POR: Debs Carvalho
 // DESCRIÇÃO: Recebe o sinal de interação do PlayerInputHandler e repassa para o NPC em range.
 // ----------------------------------------------------------------
 
@@ -10,7 +11,7 @@ using UnityEngine;
 public class PlayerInteracion : MonoBehaviour
 {
     private PlayerInputHandler inputHandler;
-    private NpcQuestGiver currentNpc;
+    private NpcController currentNpc;
 
     private void Awake()
     {
@@ -28,18 +29,18 @@ public class PlayerInteracion : MonoBehaviour
     }
 
     // Chamado pelo NpcInteractionTrigger quando o player entra na área
-    public void SetNpcInRange(NpcQuestGiver npc)
+    public void SetNpcInRange(NpcController npc)
     {
         currentNpc = npc;
         Debug.Log($"[PlayerInteracion] NPC em range: {npc?.name}");
     }
 
     // Chamado pelo NpcInteractionTrigger quando o player sai da área
-    public void ClearNpcInRange(NpcQuestGiver npc)
+    public void ClearNpcInRange(NpcController npc)
     {
         if (currentNpc == npc)
         {
-            currentNpc.CancelQuest();
+            currentNpc.Cancel();
             currentNpc = null;
         }
     }

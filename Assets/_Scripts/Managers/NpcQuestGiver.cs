@@ -1,5 +1,6 @@
 //----------------------------------------------------------------
 // CRIADO EM: 2026-05
+// FEITO POR: Debora Carvalho
 // DESCRIÇÃO: Localizado no GameObject do NPC.
 // Ele gerencia o fluxo: abrir quest → jogador grava → avalia → sucesso ou nova tentativa.
 // ----------------------------------------------------------------

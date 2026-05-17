@@ -1,3 +1,9 @@
+//------------------------
+// Author: Debs Carvalho
+// Data: 2026-05
+// Description: Component to playback audio recorded by the MicrophoneRecorder;
+//------------------------
+
 using UnityEngine;
 using UnityEngine.Events;
 

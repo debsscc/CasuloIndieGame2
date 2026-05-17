@@ -1,3 +1,9 @@
+//------------------------
+// Author: Debs Carvalho
+// Data: 2026-05
+// Description: Component to visualize audio input from a microphone or audio source in real-time;
+//------------------------
+
 using System;
 using System.Collections;
 using System.Collections.Generic;

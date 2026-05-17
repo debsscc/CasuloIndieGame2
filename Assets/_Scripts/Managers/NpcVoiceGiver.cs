@@ -1,20 +1,12 @@
-// ----------------------------------------------------------------
+//----------------------------------------------------------------
 // CRIADO EM: 2026-05
-// DESCRIÇÃO: Componente no NPC que controla o popup "DAR A VOZ A NPC".
-//   - Bloqueia o movimento do player desde o Awake.
-//   - Libera SOMENTE após o player confirmar a gravação.
-//   - openOnSceneStart: abre automaticamente ao carregar a cena (após fade-in)
-//   - Player pode re-interagir (tecla E) dentro do trigger para reabrir após cancelar
-//   - OnVoiceConfirmed(AudioClip): wire no Inspector para FootstepPlayer.SetFootstepClip
-//
-// Requisito na cena:
-//   O NPC deve ter UM Collider2D com Is Trigger = true (zona de interação).
-//   O player deve ter a tag "Player" e os componentes PlayerMovement + PlayerInputHandler.
+// FEITO POR: Debora Carvalho
+// DESCRIÇÃO: Localizado no GameObject do NPC.
+// Ele gerencia o fluxo: abrir quest → jogador grava → avalia → sucesso ou nova tentativa.
 // ----------------------------------------------------------------
 
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 // Garante que Awake/Start deste script rodem APÓS o PlayerMovement (ordem padrão = 0)
 [DefaultExecutionOrder(10)]
@@ -29,9 +21,9 @@ public class NpcVoiceGiver : MonoBehaviour
     [Tooltip("Delay em segundos antes de abrir o popup (dá tempo do fade-in)")]
     [SerializeField] private float autoOpenDelay = 0.8f;
 
-    [Header("Eventos")]
-    [Tooltip("Wire: FootstepPlayer.SetFootstepClip ou outro receptor do clip")]
-    public UnityEvent<AudioClip> OnVoiceConfirmed;
+    [Header("Resultado da gravação")]
+    [Tooltip("Arraste o FootstepPlayer do Player aqui para aplicar o clip gravado")]
+    [SerializeField] private FootstepPlayer footstepPlayer;
 
     // ── Referências do player ─────────────────────────────────────
     [Header("Player")]
@@ -115,13 +107,21 @@ public class NpcVoiceGiver : MonoBehaviour
     {
         questDone = true;
 
+        // Define o clip ANTES de liberar o movimento — evita primeiro passo sem som
+        if (footstepPlayer == null)
+            footstepPlayer = FindAnyObjectByType<FootstepPlayer>();
+
+        if (footstepPlayer != null)
+            footstepPlayer.SetFootstepClip(clip);
+        else
+            Debug.LogWarning("[NpcVoiceGiver] FootstepPlayer não encontrado na cena.", this);
+
         BlockPlayer(false);
 
         // Desinscreve input — quest concluída, não precisa mais reabrir
         if (playerInput != null)
             playerInput.OnInteractInput -= HandleInteract;
 
-        OnVoiceConfirmed?.Invoke(clip);
         Debug.Log("[NpcVoiceGiver] Voz confirmada. Clip: " + clip?.name);
     }
 

@@ -1,3 +1,9 @@
+//------------------------
+// Author: Debs Carvalho
+// Data: 2026-05
+// Description: Component to manage the main menu, including starting the game, opening settings, and quitting;
+//------------------------
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

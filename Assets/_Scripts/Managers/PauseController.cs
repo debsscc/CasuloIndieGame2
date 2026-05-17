@@ -1,3 +1,10 @@
+//----------------------------------------------------------------
+// CRIADO EM: 2026-05
+// FEITO POR: Debora Carvalho
+// DESCRIÇÃO: Localizado no GameObject do PauseController.
+// Ele gerencia o fluxo: abrir menu de pausa → jogador interage → retoma ou sai do jogo.
+// ----------------------------------------------------------------
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 

@@ -1,3 +1,9 @@
+//------------------------
+// Author: Debs Carvalho
+// Data: 2026-05
+// Description: Component to capture audio from the player's microphone and store it in an AudioClip;
+//------------------------
+
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;

@@ -1,3 +1,10 @@
+//----------------------------------------------------------------
+// CRIADO EM: 2026-05
+// FEITO POR: Debora Carvalho
+// DESCRIÇÃO: Componente genérico Singleton.
+// Ele garante que apenas uma instância do tipo T exista na cena.
+// ----------------------------------------------------------------
+
 using UnityEngine;
 
 public class Singleton<T> : MonoBehaviour where T : Singleton<T>

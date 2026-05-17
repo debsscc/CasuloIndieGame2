@@ -1,5 +1,6 @@
 ///* ----------------------------------------------------------------
 // CRIADO EM: 2026-05
+// FEITO POR: Debs Carvalho
 // DESCRIÇÃO: MonoBehaviour que escuta o OnRecordingFinished, roda o analyzer e dispara OnMatchSuccess ou OnMatchFail com o score
 // ---------------------------------------------------------------- */
 

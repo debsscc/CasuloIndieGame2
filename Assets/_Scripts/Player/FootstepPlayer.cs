@@ -11,7 +11,7 @@ using UnityEngine;
 public class FootstepPlayer : MonoBehaviour
 {
     [Header("Configurações")]
-    [SerializeField] private float stepInterval = 0.4f;       // segundos entre cada passo
+    [SerializeField] private float stepInterval = 0.2f;    // segundos entre cada passo
     [SerializeField] private float runStepInterval = 0.25f;   // intervalo menor ao correr
     [SerializeField] [Range(0f, 1f)] private float volume = 1f;
 

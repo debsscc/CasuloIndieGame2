@@ -3,6 +3,7 @@
 // FEITO POR: Debora Carvalho
 // DESCRIÇÃO: Manipula o input do jogador e dispara eventos que outros componentes podem assinar.
 // ---------------------------------------------------------------- */
+
 using UnityEngine;
 using UnityEngine.InputSystem; 
 using System; 
