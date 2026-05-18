@@ -1,8 +1,57 @@
 title: NPC2_Frutinhas
 tags:
 ---
-NPC2: Oi! Vê só aquele arbusto?
-NPC2: Tem umas frutinhas boas!
-NPC2: Por que você não pega algumas para você? São bem fresquinhas!
-NPC2: Fica à vontade, tem bastante para colher.
+<<if get_fruit_quest_state() == 3>>
+    <<jump NPC2_PosQuest>>
+<<elseif get_fruit_quest_state() == 2>>
+    <<jump NPC2_EntregaFrutas>>
+<<elseif get_fruit_quest_state() == 1>>
+    <<jump NPC2_QuestAtiva>>
+<<else>>
+    <<jump NPC2_OfertaQuest>>
+<<endif>>
+===
+
+title: NPC2_OfertaQuest
+tags:
+---
+NPC2: Oi! Tudo bem?
+NPC2: Vê só aquele arbusto ali...
+NPC2: Tem umas frutinhas bem fresquinhas e eu tô com vontade de comer algumas.
+NPC2: Mas eu tô ocupado aqui agora... você poderia pegar 5 pra mim?
+-> Claro, sem problema!
+    NPC2: Que ótimo! Você é um amor, obrigado!
+    NPC2: Vai lá no arbusto e aperte E pra sacudir ele.
+    NPC2: As frutas vão cair — é só catá-las do chão. Me traz 5, tá?
+    <<start_fruit_quest>>
+-> Talvez mais tarde...
+    NPC2: Tudo bem, sem pressa! Quando quiser é só me chamar.
+===
+
+title: NPC2_QuestAtiva
+tags:
+---
+NPC2: Conseguiu as frutas?
+NPC2: Lembra: 5 frutinhas fresquinhas, tá? O arbusto fica ali pertinho!
+===
+
+title: NPC2_EntregaFrutas
+tags:
+---
+NPC2: Ei, você voltou!
+NPC2: Tem as frutas aí?
+-> Aqui estão as 5 frutinhas!
+    NPC2: Nossa, muito obrigado mesmo!
+    NPC2: Olha que bonitas... são as mais perfeitas que já vi!
+    NPC2: *come uma* Hmmm, deliciosas! Você é incrível!
+    NPC2: Fica à vontade pra me visitar quando quiser, tá?
+    <<complete_fruit_quest>>
+===
+
+title: NPC2_PosQuest
+tags:
+---
+NPC2: Oi de novo!
+NPC2: Aquelas frutinhas que você trouxe foram incríveis, obrigado!
+NPC2: Me conta, como tá sendo sua caminhada por aqui?
 ===

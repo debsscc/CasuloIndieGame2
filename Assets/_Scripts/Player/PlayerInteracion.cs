@@ -13,6 +13,9 @@ public class PlayerInteracion : MonoBehaviour
     private PlayerInputHandler inputHandler;
     private NpcController currentNpc;
 
+    // Interagíveis não-NPC (ex.: BushInteractable)
+    private IInteractable currentInteractable;
+
     private void Awake()
     {
         inputHandler = GetComponent<PlayerInputHandler>();
@@ -45,6 +48,22 @@ public class PlayerInteracion : MonoBehaviour
         }
     }
 
+    // Chamado por qualquer IInteractable (ex.: BushInteractable) quando o player entra na área
+    public void SetInteractableInRange(IInteractable interactable)
+    {
+        currentInteractable = interactable;
+    }
+
+    // Chamado por qualquer IInteractable quando o player sai da área
+    public void ClearInteractableInRange(IInteractable interactable)
+    {
+        if (currentInteractable == interactable)
+        {
+            currentInteractable.Cancel();
+            currentInteractable = null;
+        }
+    }
+
     private void HandleInteract()
     {
         // Não abre o menu se o balão de diálogo estiver ativo
@@ -53,8 +72,18 @@ public class PlayerInteracion : MonoBehaviour
         // Não abre o menu se o popup de voz estiver aberto
         if (NpcVoicePopup.Instance != null && NpcVoicePopup.Instance.IsOpen) return;
 
-        string npcName = currentNpc != null ? currentNpc.name : "NULL";
-        Debug.Log($"[PlayerInteracion] HandleInteract chamado. currentNpc={npcName}");
-        currentNpc?.Interact();
+        // NPC tem prioridade sobre outros interagíveis
+        if (currentNpc != null)
+        {
+            Debug.Log($"[PlayerInteracion] HandleInteract → NPC: {currentNpc.name}");
+            currentNpc.Interact();
+            return;
+        }
+
+        if (currentInteractable != null)
+        {
+            Debug.Log($"[PlayerInteracion] HandleInteract → Interactable: {currentInteractable}");
+            currentInteractable.Interact();
+        }
     }
 }
