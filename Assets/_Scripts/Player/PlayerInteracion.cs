@@ -47,6 +47,12 @@ public class PlayerInteracion : MonoBehaviour
 
     private void HandleInteract()
     {
+        // Não abre o menu se o balão de diálogo estiver ativo
+        if (NpcSpeechBubble.Instance != null && NpcSpeechBubble.Instance.IsVisible) return;
+
+        // Não abre o menu se o popup de voz estiver aberto
+        if (NpcVoicePopup.Instance != null && NpcVoicePopup.Instance.IsOpen) return;
+
         string npcName = currentNpc != null ? currentNpc.name : "NULL";
         Debug.Log($"[PlayerInteracion] HandleInteract chamado. currentNpc={npcName}");
         currentNpc?.Interact();

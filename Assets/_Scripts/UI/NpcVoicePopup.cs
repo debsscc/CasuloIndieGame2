@@ -1,12 +1,7 @@
 // ----------------------------------------------------------------
 // CRIADO EM: 2026-05
+// FEITO POR: Debs Carvalho
 // DESCRIÇÃO: Popup "DAR A VOZ A NPC". Gerencia 3 estados:
-//   Ready     → mostra instrução + botão de gravar + botão cancelar
-//   Recording → gravação ativa (2 s automáticos), wave reagindo ao mic
-//   Recorded  → mostra botões: Ouvir | Regravar | Confirmar
-//
-// Animação pop idêntica à QuestUI (SmoothStep alpha + scale).
-// Connecte os eventos a PlayerMovement / FootstepPlayer / etc. no Inspector.
 // ----------------------------------------------------------------
 
 using System.Collections;
@@ -50,8 +45,11 @@ public class NpcVoicePopup : MonoBehaviour
     public UnityEvent             OnPopupCanceled;    // wire: NpcVoiceGiver
 
     // ── Estado interno ────────────────────────────────────────────
+    // O estado é controlado por SetState, que ativa/desativa os grupos de UI correspondentes. 
     private enum State { Hidden, Ready, Recording, Recorded }
     private State state = State.Hidden;
+
+    public bool IsOpen => state != State.Hidden;
 
     private CanvasGroup canvasGroup;
     private Coroutine   panelCoroutine;

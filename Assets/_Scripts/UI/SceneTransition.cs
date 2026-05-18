@@ -1,6 +1,8 @@
 ///* ----------------------------------------------------------------
 // Controla o fade in/out para transição entre cenas.
 //            Requer um CanvasGroup com uma imagem preta cobrindo a tela.
+// Feito por Debs Carvalho
+// Data: 2026-05
 // ---------------------------------------------------------------- */
 
 using System.Collections;

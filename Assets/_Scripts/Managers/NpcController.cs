@@ -1,22 +1,12 @@
 // ----------------------------------------------------------------
 // CRIADO EM: 2026-05
-// DESCRIÇÃO: Cérebro central de cada NPC. Recebe o Interact() do player,
-//   abre o NpcActionMenu com as opções corretas para o estado atual do NPC
-//   e roteia cada escolha para o sistema correspondente.
-//
-// Estados:
-//   sem voz → botões: "Dar a Voz" (se tem voiceGiver) + "Sair"
-//   com voz → botões: "Conversar" + "Sair"
-//
-// Setup:
-//   1. Adicione NpcController ao NPC (junto com NpcInteractionTrigger)
-//   2. Se o NPC tem mecânica de voz, atribua voiceGiver
-//   3. Preencha yarnConversarNode com o nó Yarn para "Conversar"
-//   4. Após a voz ser confirmada, chame SetHasVoice(true) — wire via NpcVoiceGiver
+// DESCRIÇÃO: Cérebro central de cada NPC. Gerencia o estado de voz, recebe o sinal de interação do player e aciona o menu de ações (NpcActionMenu) e o diálogo (Yarn DialogueRunner +
+// FEITO POR: Debs Carvalho 
 // ----------------------------------------------------------------
 
 using UnityEngine;
 using UnityEngine.Events;
+using Yarn.Unity;
 
 public class NpcController : MonoBehaviour
 {
@@ -34,12 +24,20 @@ public class NpcController : MonoBehaviour
     [Header("Diálogo (Yarn)")]
     [Tooltip("Nó Yarn iniciado ao escolher 'Conversar'")]
     [SerializeField] private string yarnConversarNode;
+    [Tooltip("DialogueRunner da cena (auto-buscado se não atribuído)")]
+    [SerializeField] private DialogueRunner dialogueRunner;
 
     // ── Eventos ───────────────────────────────────────────────────
     [Header("Eventos")]
     public UnityEvent OnVoiceReceived;
 
     // =============================================================
+
+    private void Awake()
+    {
+        if (voiceGiver == null)
+            voiceGiver = GetComponent<NpcVoiceGiver>();
+    }
 
     /// <summary>Chamado pelo PlayerInteracion quando o player pressiona E perto deste NPC.</summary>
     public void Interact()
@@ -99,9 +97,17 @@ public class NpcController : MonoBehaviour
             return;
         }
 
-        // TODO: integrar YarnSpinner com posição do NPC
-        // YarnDialogueRunner.Instance?.StartDialogue(yarnConversarNode, transform);
-        Debug.Log($"[NpcController] Iniciar Yarn: '{yarnConversarNode}'");
+        if (dialogueRunner == null)
+            dialogueRunner = FindAnyObjectByType<DialogueRunner>();
+
+        if (dialogueRunner == null)
+        {
+            Debug.LogError("[NpcController] DialogueRunner não encontrado na cena.", this);
+            return;
+        }
+
+        NpcSpeechBubble.Instance?.TrackNpc(transform);
+        dialogueRunner.StartDialogue(yarnConversarNode);
     }
 
     public void OnMenuSair()

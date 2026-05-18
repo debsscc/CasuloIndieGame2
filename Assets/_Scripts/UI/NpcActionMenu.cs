@@ -1,15 +1,7 @@
 // ----------------------------------------------------------------
 // CRIADO EM: 2026-05
+// FEITO POR: Debs Carvalho
 // DESCRIÇÃO: Menu de ações que flutua acima do NPC quando o player pressiona E.
-//
-// Setup na cena:
-//   1. Adicione este script + CanvasGroup a um GameObject filho do Canvas
-//   2. Atribua menuPanel (o RectTransform do painel/bolha visual)
-//   3. Arraste os botões já existentes na hierarquia:
-//      btnSair, btnConversar, btnDarVoz
-//   4. Os botões são mostrados/escondidos conforme o estado do NPC —
-//      NÃO são criados dinamicamente, apenas ativados/desativados.
-//   5. O painel flutua acima do NPC automaticamente.
 // ----------------------------------------------------------------
 
 using System.Collections;

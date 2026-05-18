@@ -1,11 +1,7 @@
 // ----------------------------------------------------------------
 // CRIADO EM: 2026-05
-// DESCRIÇÃO: Controla o painel do diário — cria botões automaticamente
-//            no painel esquerdo (Esq_panel) e exibe o conteúdo da
-//            entrada selecionada no painel direito (DIR_panel).
-//            Não precisa de prefab.
-//            Entradas são desbloqueadas via UnlockEntry(entryId),
-//            chamado por NPCs, triggers ou eventos de história.
+// DESCRIÇÃO: Controla o painel do diário do jogador.
+// FEITO POR: Debs Carvalho
 // ----------------------------------------------------------------
 
 using System.Collections.Generic;

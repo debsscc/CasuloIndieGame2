@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------
 // CRIADO EM: 2026-05
+// FEITO POR: Debs Carvalho
 // DESCRIÇÃO: UI para mostrar título, descrição, feedback de sucesso/falha e hints da quest.
 // ----------------------------------------------------------------
 

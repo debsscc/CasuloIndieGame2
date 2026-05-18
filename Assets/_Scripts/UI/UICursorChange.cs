@@ -1,3 +1,9 @@
+// ----------------------------------------------------------------
+// CRIADO EM: 2026-05
+// FEITO POR: Debs Carvalho
+// DESCRIÇÃO: Controla o cursor do mouse.
+// ----------------------------------------------------------------
+
 using UnityEngine;
 
 public class UICursorChange : MonoBehaviour

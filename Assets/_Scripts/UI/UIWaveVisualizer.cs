@@ -4,9 +4,11 @@
 //            ao invés de Transform[] 3D. Escala a altura (sizeDelta.y) de cada
 //            barra com base na amplitude do microfone em tempo real.
 //            Mesma lógica do AudioVisualizer (AudioLoudnessRecorder.cs) da cena Menu.
+// FEITO POR: Debs Carvalho
 // ----------------------------------------------------------------
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIWaveVisualizer : MonoBehaviour
 {
@@ -34,6 +36,14 @@ public class UIWaveVisualizer : MonoBehaviour
         if (micRecorder == null)
             micRecorder = FindAnyObjectByType<MicrophoneRecorder>();
 
+        // Corrige o HorizontalLayoutGroup: alinha na base e libera altura individual
+        var hlg = GetComponent<HorizontalLayoutGroup>();
+        if (hlg != null)
+        {
+            hlg.childAlignment        = TextAnchor.LowerLeft;  // ancora barras no fundo
+            hlg.childForceExpandHeight = false;                 // respeita sizeDelta.y de cada barra
+        }
+
         if (bars != null && bars.Length > 0)
         {
             currentHeights = new float[bars.Length];
@@ -42,13 +52,12 @@ public class UIWaveVisualizer : MonoBehaviour
             {
                 currentHeights[i] = minHeight;
 
-                // Garante que a barra cresce para cima a partir da base
-                if (bars[i] != null)
-                {
-                    var pivot  = bars[i].pivot;
-                    pivot.y    = 0f;
-                    bars[i].pivot = pivot;
-                }
+                if (bars[i] == null) continue;
+
+                // Altura inicial
+                var size = bars[i].sizeDelta;
+                size.y   = minHeight;
+                bars[i].sizeDelta = size;
             }
         }
     }
